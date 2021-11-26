@@ -124,34 +124,48 @@ function App() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="mac"></label>
-        <input
-          value={mac}
-          onChange={(e) => setMac(e.target.value)}
-          name="mac"
-        />
-        <label htmlFor="measure1"></label>
-        <input
-          value={measure1}
-          name="measure1"
-          onChange={(e) => setMeasure1(e.target.value)}
-        />
-        <label htmlFor="measure2"></label>
-        <input
-          value={measure2}
-          name="measure2"
-          onChange={(e) => setMeasure2(e.target.value)}
-        />
-        <label htmlFor="measure3"></label>
-        <input
-          value={measure3}
-          name="measure3"
-          onChange={(e) => setMeasure3(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
       <Plot data={data} />
+      <form onSubmit={handleSubmit}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            alignContent: "center",
+          }}
+        >
+          <label htmlFor="mac">Mac</label>
+          <input
+            value={mac}
+            onChange={(e) => setMac(e.target.value)}
+            name="mac"
+            id="mac"
+          />
+          <label htmlFor="measure1">M1</label>
+          <input
+            value={measure1}
+            name="measure1"
+            id="measure1"
+            onChange={(e) => setMeasure1(e.target.value)}
+          />
+          <label htmlFor="measure2">M2</label>
+          <input
+            value={measure2}
+            name="measure2"
+            id="measure2"
+            onChange={(e) => setMeasure2(e.target.value)}
+          />
+          <label htmlFor="measure3">M3</label>
+          <input
+            value={measure3}
+            name="measure3"
+            id="measure3"
+            onChange={(e) => setMeasure3(e.target.value)}
+          />
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }
